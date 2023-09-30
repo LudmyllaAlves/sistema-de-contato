@@ -37,7 +37,7 @@ a:hover{
 
 main{
     max-width: 100%;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 110px);
     display: flex;
     background-color: var(--color-fundo);
 }
@@ -49,7 +49,7 @@ p{
 }
 footer{
     background-color: var(--color-principal);
-    height: 40px;
+    height: 60px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -142,28 +142,29 @@ div.filtros{
 }
 
 label{
+    margin-left: 50vh;
     color: var(--color-escuro) ;
     font-size: 15px;
 }
 
 input.filtro{
-    color: var(--color-principal);
-    background: var(--color-sombra); 
+    color: var(--color-fundo);
+    background: var(--color-principal); 
     font-size: 10px;
-    margin: 10px;
+    margin: 5px;
     margin-bottom: 15px;
-    border: 1px solid var(--color-principal);
-    padding: 1px;
+    border: none;
+    padding: 3px;
     font-size: 10px;
+    border-radius: 5px;
 }
 
 input.pesquisa{
     background-color: var(--color-fundo);
     font-size: 15px;
-    width: 200px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin: 15px;
+    width: 500px;
+    margin-left: 50vh;
+    margin-top: 10px;
     border:1px solid var(--color-principal) ;
     color: var(--color-principal) ;
 
@@ -189,30 +190,12 @@ div.contatos{
 }
 
 
-
 fieldset{
     border: 3px solid var(--color-principal); ;
 }
 
-div.contatos select{
-    background-color: var(--color-fundo);
-    color: var(--color-principal);
-    font-size: 15px;
-    
-    width: 200px;
-    margin: 10px;
-    border-color: var(--color-principal) ;
-    
-}
-
-
-div .titulos{
-    text-align: center;
-}
-
 
 div.contatos button{
-
     font-size: 15px;
     margin: 10px;
     border-color: var(--color-principal) ;
@@ -280,5 +263,3 @@ a.button-cancelar{
         text-decoration: none;
     }
   }
-
-

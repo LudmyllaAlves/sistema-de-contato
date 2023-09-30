@@ -14,14 +14,7 @@ class Contato extends Model
     protected $table = 'contatos';
 
     
-    public function genero()
-    {
-        return $this->belongsTo(Genero::class, 'genero');
-    }
-    public function contatos()
-{
-    return $this->hasMany(Contato::class, 'genero'); // Substitua 'genero_id' pelo nome correto do seu campo de chave estrangeira.
-}
+
 
 
 }

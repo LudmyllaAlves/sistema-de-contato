@@ -16,9 +16,8 @@ return new class extends Migration
             $table->string('nome', 135);
             $table->string('email' , 135);
             $table->string('telefone', 30);
-            $table->unsignedBigInteger('genero') ;
+            $table->string('cidade', 30) ;
             $table->timestamps();
-            $table->foreign('genero')->references('id')->on('generos');
         });
     }
 

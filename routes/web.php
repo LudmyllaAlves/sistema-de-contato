@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Contato;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\GeneroController;
 use Illuminate\Console\Scheduling\Event;
 
 /*
@@ -19,8 +18,8 @@ use Illuminate\Console\Scheduling\Event;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [ContatoController::class, 'index']);
-Route::get('/contatos/create', [GeneroController::class, 'index', ContatoController::class, 'create'], []);
+Route::get('/', [ContatoController::class, 'index'],);
+Route::get('/contatos/create', [ContatoController::class, 'create'], []);
 Route::post('/contato', [ContatoController::class, 'store']);
 Route::delete('/contatos/{id}', [ContatoController::class, 'destroy']);
 Route::get('/contatos/{id}', [ContatoController::class, 'show']);

@@ -2,12 +2,19 @@
 @section ('title', 'Criar Contato')
 @section ('content')
 
+@extends ('layouts.main')
+@section ('title', 'Criar Contato')
+@section ('content')
+
 <div class="contatos">
     <form action="/contato" method="POST">
         <fieldset>
         @csrf
         <label>Digite seu nome:</label><br>
-        <input type="text" name="nome"><br>
+        <input type="text" name="nome" placeholder="joão"><br>
+        @foreach($errors->get('nome') as $mensagem)
+        <p class="text-danger">{{ $mensagem }}</p>
+        @endforeach
 
         <label>Digite seu e-mail:</label><br>
         <input type="text" name="email" id="email"  placeholder="joao@gmail.com"><br>
@@ -16,17 +23,15 @@
         @endforeach
 
         <label>Digite seu telefone:</label><br>
-        <input type="text" id="telefone" name="telefone" data-inputmask="'mask': '(99) 99999-9999'"><br>
+        <input type="text" id="telefone" name="telefone" placeholder="(12) 12345-1234" data-inputmask="'mask': '(99) 99999-9999'"><br>
         @foreach($errors->get('telefone') as $mensagem)
         <p class="text-danger">{{ $mensagem }}</p>
         @endforeach
-        <label>Selecione seu genero</label><br>
-        <select name="genero" id="genero" require>
-            @foreach($generos as $genero)
-            <option value="{{$genero->id}}">{{$genero->tipo}}</option>
-            @endforeach
-        </select><br>
-
+        <label>Adicione a cidade</label><br>
+        <input type="text"name="cidade" placeholder="Rio de janeiro"><br>
+        @foreach($errors->get('cidade') as $mensagem)
+        <p class="text-danger">{{ $mensagem }}</p>
+        @endforeach
         <button type="submit">Criar contato</button>
         </fieldset>
     </form>
@@ -47,3 +52,7 @@
         $('#telefone').inputmask();
     });
 </script>
+
+
+
+

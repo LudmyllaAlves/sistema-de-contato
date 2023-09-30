@@ -18,6 +18,9 @@
         @method('PUT')
         <label >Digite um novo nome:</label><br>
         <input type="text" name="nome" value="{{$contato->nome}}"><br>
+        @foreach($errors->get('nome') as $mensagem)
+        <p class="text-danger">{{ $mensagem }}</p>
+        @endforeach
         <label>Digite um novo e-mail:</label><br>
         <input type="text"name="email" value="{{ $contato->email }}"><br>
         @foreach($errors->get('email') as $mensagem)
@@ -28,12 +31,11 @@
         @foreach($errors->get('telefone') as $mensagem)
         <p role="alert" class="text-danger">{{ $mensagem }}</p>
         @endforeach
-        <label>Selecione seu genero</label><br>
-        <select name="genero" id="genero" require>
-            @foreach($generos as $genero)
-            <option value="{{$genero->id}}">{{$genero->tipo}}</option>
-            @endforeach
-        </select><br>
+        <label>Atualize a cidade</label><br>
+        <input type="text"name="cidade" value="{{ $contato->cidade }}"><br>
+        @foreach($errors->get('cidade') as $mensagem)
+        <p class="text-danger">{{ $mensagem }}</p>
+        @endforeach
         <button>Salvar edições</button>
     </form>
 </div>

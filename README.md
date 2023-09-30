@@ -18,9 +18,11 @@ No terminal abrir a pasta do projeto
   
 Execute os seguintes comandos 
 
-php artisan make:migration
+php artisan make:migrate
 
-A seguir execute o php artisan serve
+A seguir execute o 
+
+php artisan serve
 
 Após esses passos o projeto está pronto para ser usado
 
