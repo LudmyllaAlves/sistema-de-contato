@@ -22,13 +22,18 @@ Após esses passos baixar o projeto aqui disponibilizado
 
 Abra a pasta do projeto no terminal
 
-Execute composer install para instalar dependencias e espere carregar
+Execute 'composer install' para instalar dependencias, espere barxar os arquivos e execute o comando 'php artisan key:generate'
+
+
+Após isso edite o arquivo .env.example para .env
+
+Depois entre no aquivo e confira ele esta fazendo a conexão com o banco de acordo com seus atributos exemplo se o banco de dados está na porta correta e mude o nome descrito la para o nomedo banco de dados criado
   
-Execute os seguintes comandos 
+Execute os seguintes comandos :
 
 php artisan migrate
 
-A seguir execute o 
+A seguir execute o: 
 
 php artisan serve
 
